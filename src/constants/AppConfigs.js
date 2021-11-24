@@ -42,5 +42,5 @@ export const MENUS = [
   }
 ]
 
-export const ISSUE_FEE = ethers.utils.parseEther('10')
+export const ISSUE_FEE = ethers.utils.parseEther('1')
 export const DISTANCE_LIMIT = 100 // meters

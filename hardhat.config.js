@@ -5,7 +5,7 @@ require("@nomiclabs/hardhat-ethers");
 require('dotenv').config()
 
 module.exports = {
-  defaultNetwork: "private",
+  defaultNetwork: "mumbai",
   networks: {
     hardhat: {
     },
@@ -13,9 +13,12 @@ module.exports = {
       url: 'http://localhost:8545',
       accounts: [process.env.REACT_APP_PRIV_KEY]
     },
-    private: {
-      url: process.env.REACT_APP_RPC_PROVIDER,
-      chainId: parseInt(process.env.REACT_APP_NETWORK_ID),
+    matic: {
+      url: 'https://polygon-rpc.com/',
+      accounts: [process.env.REACT_APP_PRIV_KEY]
+    },
+    mumbai: {
+      url: 'https://rpc-mumbai.maticvigil.com/',
       accounts: [process.env.REACT_APP_PRIV_KEY]
     }
   },
@@ -25,7 +28,7 @@ module.exports = {
     disambiguatePaths: true
   },
   solidity: {
-    version: "0.8.4",
+    version: "0.8.1",
     settings: {
       optimizer: {
         enabled: true,

@@ -28,7 +28,7 @@ contract BashoNFT is Ownable, ERC721Enumerable {
 
     string private _baseTokenURI;
 
-    uint private issueFee = 10 ether;
+    uint private issueFee = 1 ether;
 
     Counters.Counter private idTracker;
     mapping (uint256 => Certificate) certificates;
